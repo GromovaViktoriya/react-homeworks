@@ -1,35 +1,14 @@
-function Header() {
-    return <header>
-        <h1>JSX и компоненты</h1>
-    </header>
-}
+import Header from "./components/Header.jsx";
+import {MainContent, Section} from "./components/Content.jsx";
+import Footer from "./components/Footer.jsx";
 
-function Section() {
-    return <section>
-        <h3>Заголовок</h3>
-        <p>Статический текст 1</p>
-        <p>Статический текст 1</p>
-    </section>
-}
-
-function MainContent() {
-    return (
-        <>
-            <main><h2>Основное содержимое страницы</h2></main>
-            <Section/>
-        </>
-    )
-}
-
-function Footer() {
-    return <footer>2026г.</footer>
-}
 
 function App() {
     return (
         <div>
             <Header/>
             <MainContent/>
+            <Section/>
             <Footer/>
         </div>
     )
