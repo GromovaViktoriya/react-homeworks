@@ -1,15 +1,29 @@
-import Header from "./components/Header.jsx";
-import {MainContent, Section} from "./components/Content.jsx";
-import Footer from "./components/Footer.jsx";
-
+import {UserCard} from "./components/UserCard.jsx";
 
 function App() {
     return (
         <div>
-            <Header/>
-            <MainContent/>
-            <Section/>
-            <Footer/>
+            <UserCard
+                name="Павел"
+                role="Frontend-разработчик"
+                experience={3}
+                location={{ city: "Минск", country: "Беларусь" }}
+                isAvailable={true}
+            />
+            <UserCard
+                name="Вика"
+                role="Frontend-разработчик"
+                experience={0}
+                location={{ city: "Алматы", country: "Казахстан" }}
+                isAvailable={true}
+            />
+            <UserCard
+                name="Андрей"
+                role="Data-инженер"
+                experience={3}
+                location={{ city: "Алматы", country: "Казахстан" }}
+                isAvailable={false}
+            />
         </div>
     )
 }
