@@ -8,7 +8,7 @@ export const UserCard = ({
     location,
     isAvailable,
 }) => {
-    let years = experience === 1
+    const years = experience === 1
         ? 'год'
         : experience >= 2 && experience <= 4
             ? 'года'
