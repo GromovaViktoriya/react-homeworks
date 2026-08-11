@@ -1,13 +1,26 @@
-import {UserProfile} from "./components/UserProfile.jsx";
-import {TaskList} from "./components/TaskList.jsx";
-import {ItemCart} from "./components/ItemCart.jsx";
+import {ClickPractice} from "./components/ClickPractice.jsx";
+import {InputPractice} from "./components/InputPractice.jsx";
+import {FormPractice} from "./components/FormPractice.jsx";
+import {ActionButton} from "./components/ActionButton.jsx";
 
 function App() {
+    const onClickHandler = (event) => {
+        if (event.currentTarget.name === 'Сохранить') {
+            console.log('Сохранено');
+        }
+        if (event.currentTarget.name === 'Удалить') {
+            console.log('Удалено');
+        }
+    }
+
+
     return (
         <div className="App">
-            <UserProfile/>
-            <TaskList/>
-            <ItemCart/>
+            <ClickPractice/>
+            <InputPractice/>
+            <FormPractice/>
+            <ActionButton name={'Сохранить'} onClickHandler={onClickHandler}/>
+            <ActionButton name={'Удалить'} onClickHandler={onClickHandler}/>
         </div>
     )
 }
